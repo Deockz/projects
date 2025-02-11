@@ -9,11 +9,11 @@
                 <p class="lead">"<%= book.opinion %> "</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
                     <p class="alert alert-light px-4">Puntuacion: <%= book.score %>/10</p>
-                    <p class="alert alert-light px-4">Leido: <%= book.read_date %></p>
+                    <p class="alert alert-light px-4">Leido: <%= book.read_date.toISOString().split("T")[0] %></p>
                 </div>
             </div>
             <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-                <img class="rounded-lg-3" src="https://covers.openlibrary.org/b/ISBN/<%= book.photoid %>-M.jpg" alt="" width="200">
+                <img class="rounded-lg-3" src="https://covers.openlibrary.org/b/ISBN/<%= book.photoid %>-M.jpg" alt="" width="180">
             </div>
             </div>
         </div>
