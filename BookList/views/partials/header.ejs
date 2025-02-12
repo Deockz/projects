@@ -11,18 +11,21 @@
             <div class="col-md-4 mb-2 mb-md-0">
                 <h3 class="display-4 fw-bold lh-1 text-body-emphasis">Libros Leidos</h3>
             </div>
-
-            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><p class="nav-link px-2 link-secondary">Ordenar por: </p></li>
-            <li><a href="#" class="nav-link px-2">Fecha</a></li>
-            <li><a href="#" class="nav-link px-2">Titulo</a></li>
-            <li><a href="#" class="nav-link px-2">Autor</a></li>
-            <li><a href="#" class="nav-link px-2">Puntuacion</a></li>
-            </ul>
-
-            <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-primary me-2">Agregar Libro</button>
-            </div>
+            <form action="/" method="post">
+                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                    <li><p class="nav-link px-2 link-secondary">Ordenar por: </p></li>
+                    <li><button type="submit" class="nav-link px-2" value="read_date" name="order">Fecha </button></li>
+                    <li><button type="submit" class="nav-link px-2" value="name" name="order">Titulo </button></li>
+                    <li><button type="submit" class="nav-link px-2" value="author" name="order">Autor </button></li>
+                    <li><button type="submit" class="nav-link px-2" value="score" name="order">Puntuacion </button></li>
+                </ul>
+            </form>
+            <form action="/new" method="get">
+                <div class="col-md-3 text-end">
+                    <button type="submit" class="btn btn-outline-primary me-2">Agregar Libro </button>
+                </div>
+            </form>
+            
         </header>
     </div>
 
